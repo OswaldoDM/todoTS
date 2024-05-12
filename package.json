@@ -2,7 +2,7 @@
   "name": "vite-ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "/",
+  "homepage": "https://oswaldodm.github.io/todoTS/",
   "type": "module",
   "scripts": {
     "dev": "vite",

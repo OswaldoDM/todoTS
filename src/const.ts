@@ -5,8 +5,6 @@ export const TODO_FILTERS = {
     COMPLETED: 'completed',
 } as const
 
-
-// No entiendo este objeto
 export const FILTERS_BUTTONS = {
     [TODO_FILTERS.ALL]: {
         literal: 'All',

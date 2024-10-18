@@ -1,7 +1,6 @@
 import { FilterValue } from "../types";
 import { FILTERS_BUTTONS } from "../const";
 
-
 interface Props {  
   filterSelected: FilterValue
   onFilterChange: (filter:FilterValue) => void

@@ -17,12 +17,12 @@ const Todos: React.FC<Props> = ({ todos, onRemoveTodo, onToggleCompleted }) => {
         key={todo.id} 
         className={`${todo.completed ? 'completed' : ''}`}>
             <TodoItem
-                key={todo.id} 
-                id={todo.id}
-                title={todo.title}
-                completed={todo.completed}
-                onRemoveTodo={onRemoveTodo}
-                onToggleCompleted={onToggleCompleted}
+              key={todo.id} 
+              id={todo.id}
+              title={todo.title}
+              completed={todo.completed}
+              onRemoveTodo={onRemoveTodo}
+              onToggleCompleted={onToggleCompleted}
             />
         </li>
       ))}

@@ -11,8 +11,8 @@ function App () {
   const [filterSelected, setFilterSelected] = useState<FilterValue>(TODO_FILTERS.ALL);
 
   const handleRemove = (id:string) => {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
-  };
+    setTodos( prevTodos => prevTodos.filter( todo => todo.id !== id) );
+  }
 
   const handleCompleted = (id:string, completed:boolean) => {
     setTodos( prevTodos => prevTodos.map( todo => {
@@ -20,38 +20,38 @@ function App () {
           return {
             ...todo,
             completed,
-          };
+          }
         }
         return todo;
       })
-    );
-  };
+    )
+  }
 
   const handleFilterChange = (filter:FilterValue) => {
     setFilterSelected(filter);
-  };
+  }
 
   const handleRemoveAllCompleted = () => {
-    const newTodos = todos.filter((todo) => !todo.completed);
+    const newTodos = todos.filter( todo => !todo.completed);
     setTodos(newTodos);
-  };
+  }
 
   const filteredTodos = todos.filter((todo) => {
     if (filterSelected === TODO_FILTERS.ACTIVE) return !todo.completed;
     if (filterSelected === TODO_FILTERS.COMPLETED) return todo.completed;
     return todo;
-  });
+  })
 
   const handleAddTodo = (title:string) => {
     const newTodo = {
       id: crypto.randomUUID(),
       title,
       completed: false,
-    };
+    }
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
-  const activeCount = todos.filter((todo) => !todo.completed).length;
+  const activeCount = todos.filter( todo => !todo.completed).length;
 
   const completedCount = todos.length - activeCount;
 
